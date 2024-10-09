@@ -2,6 +2,7 @@
   "extends": ["next/core-web-vitals", "next/typescript"],
   "rules": {
     "react/no-unescaped-entities": "off",
-    "no-var":"off"
+    "no-var":"off",
+    "@next/next/no-img-element": "off"
   }
 }
