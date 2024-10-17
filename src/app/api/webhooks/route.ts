@@ -77,7 +77,7 @@ export async function POST(req: Request) {
         react: OrderEmail({
           orderId,
           orderDate: updatedOrder.createAt.toLocaleDateString(),
-          // @ts-expect-error
+          // @ts-ignore
           shippingAddress: {
               name: session.customer_details!.name!,
               city: shippingAddress!.city!,
