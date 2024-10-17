@@ -35,5 +35,6 @@ export function constructMetadata({
       images: [{url: image}]
     },
     icons,
+    metadataBase: new URL("https://tigercase.vercel.app")
   }
 }
