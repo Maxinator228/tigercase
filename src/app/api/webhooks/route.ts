@@ -1,6 +1,5 @@
 import { db } from '@/db'
 import { stripe } from '@/lib/stripe'
-import { headers } from 'next/headers'
 import { NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import {Resend} from "resend"
@@ -78,7 +77,7 @@ export async function POST(req: Request) {
         react: OrderEmail({
           orderId,
           orderDate: updatedOrder.createAt.toLocaleDateString(),
-          // @ts-ignore
+          // @ts-expect-error
           shippingAddress: {
               name: session.customer_details!.name!,
               city: shippingAddress!.city!,
