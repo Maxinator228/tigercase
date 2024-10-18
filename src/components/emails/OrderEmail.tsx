@@ -27,7 +27,7 @@ const OrderEmail = ({
                 <Hr style={global.hr} />
                 <Section style={global.defaultPadding}>
                     <Text style={adressTitle}>
-                    Доставка в: {shippingAddress.name}
+                    Имя и адрес получателя: {shippingAddress.name}
                     </Text>
                     <Text style={{...global.text, fontSize: 14}}>
                         {shippingAddress.street}, {shippingAddress.city}, {shippingAddress.state} {shippingAddress.postalCode}
@@ -40,7 +40,7 @@ const OrderEmail = ({
                             <Text style={global.paragraphWithBold}>Номер заказа</Text>
                             <Text style={track.number}>{orderId}</Text>
                         </Column>
-                        <Column style={{marginLeft: 20}}>
+                        <Column style={{marginLeft: 50}}>
                             <Text style={global.paragraphWithBold}>Дата заказа</Text>
                             <Text style={track.number}>{orderDate}</Text>
                         </Column>
