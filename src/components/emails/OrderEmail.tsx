@@ -27,7 +27,7 @@ const OrderEmail = ({
                 <Hr style={global.hr} />
                 <Section style={global.defaultPadding}>
                     <Text style={adressTitle}>
-                    Имя и адрес получателя: {shippingAddress.name}
+                    Имя и адрес заказчика: {shippingAddress.name}
                     </Text>
                     <Text style={{...global.text, fontSize: 14}}>
                         {shippingAddress.street}, {shippingAddress.city}, {shippingAddress.state} {shippingAddress.postalCode}
