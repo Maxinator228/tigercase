@@ -65,8 +65,8 @@ const DesignCofigurator = ({configId, imgUrl, imgDimensions}: DesignConfigProps)
 
 
     const [renderedDimesion, setRenderedDimesion] = useState({
-        width: imgDimensions.width / 4,
-        height: imgDimensions.height / 4,
+        width: imgDimensions.width / 4, 
+        height: imgDimensions.height / 4 
     })
 
     const [renderedPosition, setRenderedPosition] = useState({
@@ -101,7 +101,7 @@ const DesignCofigurator = ({configId, imgUrl, imgDimensions}: DesignConfigProps)
             userImg.src = imgUrl
             await new Promise((resolve) => userImg.onload = resolve)
 
-            ctx?.drawImage(userImg, actualX, actualY, renderedDimesion.height, renderedDimesion.width)
+            ctx?.drawImage(userImg, actualX, actualY, renderedDimesion.width, renderedDimesion.height)
 
             const base64 = canvas.toDataURL()
             const base64Data = base64.split(",")[1]

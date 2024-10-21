@@ -6,10 +6,10 @@ interface PhoneProps extends HTMLAttributes<HTMLDivElement> {
     dark?: boolean;
 }
 
-const Phone = ({ img_src, className, ...props }: PhoneProps) => {
+const Phone = ({ img_src, className, dark = false,...props }: PhoneProps) => {
     return(
     <div className={cn("relative pointer-events-none z-50 overflow-hidden", className)} {...props}>
-        <img src={"/phone-template.png"} className="pointer-events-none z-50 select-none" alt="phone image"/>
+        <img src={dark ? "/phone-template-dark.png" : "/phone-template-white.png"} className="pointer-events-none z-50 select-none" alt="phone image"/>
 
         <div className="absolute -z-10 inset-0">
             <img className="object-cover min-w-full min-h-full" src={img_src} alt="overlay image" />
